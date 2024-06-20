@@ -4,19 +4,15 @@
   "description": "0x06-unittests_in_js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 0-calcul.test.js",
-    "test": "mocha 1-calcul.test.js",
-    "test": "mocha 2-calcul_chai.test.js",
-    "test": "mocha 3-payment.test.js",
-    "test": "mocha 4-payment.test.js",
-    "test": "mocha 5-payment.test.js",
-    "test": "mocha 6-payment_token.test.js",
-    "test": "mocha 7-skip.test.js"
+    "test": "mocha '*.test.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.4.0"
+    "chai": "^5.1.1",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0",
+    "sinon": "^18.0.0"
   }
 }
