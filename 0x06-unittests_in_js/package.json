@@ -4,15 +4,31 @@
   "description": "0x06-unittests_in_js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '*.test.js'"
+    "lint": "./node_modules/.bin/eslint",
+    "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
+    "lint-fix-all": "./node_modules/.bin/eslint --fix [0-9]*.js",
+    "test": "node ./node_modules/mocha/bin/mocha --require babel-register --exit",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./full_server/server.js ./database.csv"
   },
+  "dependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "chai": "^5.1.1",
-    "esm": "^3.2.25",
-    "mocha": "^10.4.0",
-    "sinon": "^18.0.0"
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.4.1",
+    "chai-http": "^4.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^22.21.0",
+    "express": "^4.19.2",
+    "mocha": "^6.2.3",
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2",
+    "sinon": "^7.5.0"
   }
 }
